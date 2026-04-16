@@ -1,0 +1,182 @@
+/* ================= wed.css ================= */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f4f6fb;
+}
+
+header {
+  background: #2c7be5;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+header h1 {
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+header p {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hamburger {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 5px;
+  transition: 0.3s;
+}
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+nav {
+  background: #1a5bb8;
+  display: flex;
+  justify-content: center;
+}
+nav a {
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+nav a:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
+  background: #144a99;
+}
+
+.hero {
+  padding: 80px;
+  text-align: center;
+  background: linear-gradient(135deg, #6ea8fe, #2c7be5);
+  color: white;
+}
+
+.section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
+.card {
+  background: #f9fbff;
+  padding: 20px;
+  flex: 1;
+  border-radius: 10px;
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.price-table th {
+  background: #2c7be5;
+  color: white;
+}
+.price-table th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+#results li {
+  background: #eef3ff;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* フォーム */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.btn {
+  background: #ff9800;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  width: auto;
+  display: inline-block;
+  max-width: fit-content; /* ← 追加：広がり防止（重要） */
+  align-self: flex-start; /* ← 追加：flexの影響を防ぐ */
+  transition: all 0.2s ease;
+}
+
+/* ★変更②：ホバー時の反応 */
+.btn:hover {
+  background: #e68900;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ★変更③：クリック時の反応（追加） */
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ★変更：ホバー時の反応 */
+.btn:hover {
+  background: #e68900;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.6s;
+}
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+  }
+  nav.active {
+    display: flex;
+  }
+  .cards {
+    flex-direction: column;
+  }
+}

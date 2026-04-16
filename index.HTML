@@ -1,0 +1,95 @@
+<!-- ================= index.html（完成版ポートフォリオ） ================= -->
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>未来アカデミー | 中学生向け学習塾</title>
+    <link rel="stylesheet" href="wed.css" />
+  </head>
+  <body>
+    <header>
+      <h1>未来アカデミー</h1>
+      <p>中学生専門の学習塾</p>
+      <div class="hamburger" onclick="toggleMenu(this)">
+        <span></span><span></span><span></span>
+      </div>
+    </header>
+
+    <nav id="navMenu">
+      <a href="#about">塾について</a>
+      <a href="#courses">コース</a>
+      <a href="#price">料金</a>
+      <a href="#results">合格実績</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+
+    <section class="hero fade">
+      <h1>成績アップを全力サポート</h1>
+      <p>定期テスト・高校受験対策に強い塾</p>
+    </section>
+
+    <section id="about" class="section fade">
+      <h2>塾について</h2>
+      <p>一人ひとりに合わせた個別指導で、確実に成績を伸ばします。</p>
+    </section>
+
+    <section id="courses" class="section fade">
+      <h2>コース</h2>
+      <div class="cards">
+        <div class="card">基礎コース</div>
+        <div class="card">応用コース</div>
+        <div class="card">受験対策</div>
+      </div>
+    </section>
+
+    <section id="price" class="section fade">
+      <h2>料金</h2>
+      <table class="price-table">
+        <tr>
+          <th>コース</th>
+          <th>料金</th>
+        </tr>
+        <tr>
+          <td>基礎</td>
+          <td>15,000円</td>
+        </tr>
+        <tr>
+          <td>応用</td>
+          <td>20,000円</td>
+        </tr>
+        <tr>
+          <td>受験</td>
+          <td>25,000円</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="results" class="section fade">
+      <h2>合格実績</h2>
+      <ul>
+        <li>〇〇高校 合格</li>
+        <li>△△高校 合格</li>
+        <li>□□高校 合格</li>
+      </ul>
+    </section>
+
+    <!-- ★お問い合わせフォーム（追加） -->
+    <section id="contact" class="section fade">
+      <h2>お問い合わせ</h2>
+      <form id="contactForm">
+        <input type="text" placeholder="お名前" required />
+        <input type="email" placeholder="メールアドレス" required />
+        <textarea placeholder="お問い合わせ内容" required></textarea>
+        <button type="submit" class="btn">送信</button>
+      </form>
+      <p id="formMessage"></p>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 未来アカデミー</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
