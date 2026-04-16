@@ -180,3 +180,90 @@ textarea {
     flex-direction: column;
   }
 }
+/* =========================
+   スマホ対応（レスポンシブ）
+========================= */
+
+@media screen and (max-width: 768px) {
+
+  /* 全体の余白調整 */
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  /* ヘッダー */
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  header p {
+    font-size: 14px;
+  }
+
+  /* ナビメニュー縦並び */
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  /* ヒーロー */
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  /* セクション */
+  .section {
+    padding: 20px 10px;
+  }
+
+  /* カードを縦並び */
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* テーブルを横スクロール対応 */
+  .price-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* フォーム */
+  form input,
+  form textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  /* ハンバーガー */
+  .hamburger {
+    display: block;
+  }
+}
